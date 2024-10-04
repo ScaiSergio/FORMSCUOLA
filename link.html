@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link per Categorie</title>
+    <style>
+        body {
+            background-color: #3c0178; /*Sfondo Viola*/
+            color: rgb(0, 0, 0); /*Colore del testo bianco per contrasto*/
+            font-family: Arial, sans-serif; /*Font per il testo*/
+            text-align: center; /*Centra il testo*/
+        }
+        .links {
+            display: none;
+            margin-top: 10px;
+        }
+        button {
+            margin: 10px;
+            padding: 15px 20px; /*Aumenta il padding per pulsanti più grandi*/
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px; /*Aggiunge angoli arrotondati*/
+            cursor: pointer;
+            font-size: 16px; /*Aumenta la dimensione del font*/
+            transition: background-color 0.3s; /*Transizione per effetto hover*/
+        }
+        button:hover {
+            background-color: #006d00; /*Colore al passaggio del mouse*/
+        }
+        ul {
+            list-style-type: none; /*Rimuove i punti elenco*/
+            padding: 0; /*Rimuove il padding predefinito*/
+        }
+        li {
+            margin: 10px 0; /*Margine verticale tra gli elementi della lista*/
+        }
+        a {
+            color: rgb(255, 255, 255); /*Colore dei link*/
+            text-decoration: none; /*Rimuove la sottolineatura dai link*/
+        }
+        a:hover {
+            text-decoration: underline; /*Sottolinea il link al passaggio del mouse*/
+        }
+    </style>
+</head>
+<body>
+
+<h1>Seleziona Una Categoria Di Link Che Ti Interessa</h1>
+
+<div>
+    <button onclick="toggleLinks('tdp')">TDP</button>
+    <button onclick="toggleLinks('sistemi')">Sistemi e Reti</button>
+    <button onclick="toggleLinks('informatica')">Informatica</button>
+    <button onclick="toggleLinks('telecomunicazioni')">Telecomunicazioni</button>
+</div>
+
+<div id="tdp" class="links">
+    <h2>Link TDP</h2>
+    <ul style="text-align:center;"> <!-- Centra il contenuto della lista -->
+        <li><a href="file:///C:/Users/scais/OneDrive/Desktop/24%20Settembre%202024/formscuola.html">Link Form</a></li>
+        <li><a href="http://example.com/tdp2">Link TDP 2</a></li>
+    </ul>
+</div>
+
+<div id="sistemi" class="links">
+    <h2>Link Sistemi e Reti</h2>
+    <ul style="text-align:center;"> <!-- Centra il contenuto della lista -->
+        <li><a href="http://example.com/sistemi1">Link Sistemi 1</a></li>
+        <li><a href="http://example.com/sistemi2">Link Sistemi 2</a></li>
+    </ul>
+</div>
+
+<div id="informatica" class="links">
+    <h2>Link Informatica</h2>
+    <ul style="text-align:center;"> <!-- Centra il contenuto della lista -->
+        <li><a href="http://example.com/informatica1">Link Informatica 1</a></li>
+        <li><a href="http://example.com/informatica2">Link Informatica 2</a></li>
+    </ul>
+</div>
+
+<div id="telecomunicazioni" class="links">
+    <h2>Link Telecomunicazioni</h2>
+    <ul style="text-align:center;"> <!-- Centra il contenuto della lista -->
+        <li><a href="http://example.com/telecomunicazioni1">Link Telecomunicazioni 1</a></li>
+        <li><a href="http://example.com/telecomunicazioni2">Link Telecomunicazioni 2</a></li>
+    </ul>
+</div>
+
+<script>
+function toggleLinks(category) {
+    const links = document.querySelectorAll('.links');
+    links.forEach(link => {
+        link.style.display = 'none'; // Nasconde tutti i div
+    });
+    
+    const selectedLinks = document.getElementById(category);
+    if (selectedLinks) {
+        selectedLinks.style.display = 'block'; // Mostra solo il div selezionato
+    }
+}
+</script>
+
+</body>
+</html>
